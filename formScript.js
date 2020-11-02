@@ -39,6 +39,6 @@ function scrollWheel()
 {
   document.getElementById("loader").className = 'opaque';
   setTimeout(function(){
-    alert("Thank you for signing up");
-    document.getElementById("loader").className = 'loader';}, 3000);
+    document.getElementById("loader").className = 'loader';
+    alert("Thank you for signing up");}, 3000);
 }
