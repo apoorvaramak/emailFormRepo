@@ -38,5 +38,7 @@ document.getElementById("submit").addEventListener('click', e => {
 function scrollWheel()
 {
   document.getElementById("loader").className = 'opaque';
-  setTimeout(function(){ alert("Hello"); }, 3000);
+  setTimeout(function(){
+    alert("Thank you for signing up");
+    document.getElementById("loader").className = 'loader';}, 3000);
 }
