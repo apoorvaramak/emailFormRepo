@@ -43,6 +43,9 @@ document.getElementById("submit").addEventListener('click', e => {
     if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(emailValue) && isChecked(checked)){
       scrollWheel();
     }
+    else {
+      alert("Something's missing, try again!")
+    }
 });
 
 function scrollWheel()
