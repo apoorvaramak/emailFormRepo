@@ -30,7 +30,10 @@ function lastNameFilled()
 }
 
 document.getElementById("submit").addEventListener('click', e => {
-   scrollWheel();
+  if(firstNameFilled() && lastNameFilled())
+  {
+    scrollWheel();
+  }
 });
 
 function scrollWheel()
