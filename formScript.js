@@ -38,10 +38,9 @@ function validateEmail(email) {
 
 
 document.getElementById("submit").addEventListener('click', e => {
-    firstNameFilled();
-    lastNameFilled();
-    validateEmail();
-    scrollWheel();
+    if(firstNameFilled() && lastNameFilled() && validateEmail()){
+      scrollWheel();
+    }
 });
 
 function scrollWheel()
