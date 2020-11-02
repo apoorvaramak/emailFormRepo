@@ -1,7 +1,7 @@
 const first = document.getElementById("firstname").value;
-document.getElementById("firstname").addEventListener('click', e => {
-  firstNameFilled();
-});
+// document.getElementById("firstname").addEventListener('click', e => {
+//   firstNameFilled();
+// });
 
 function firstNameFilled()
 {
@@ -15,12 +15,12 @@ function firstNameFilled()
 }
 
 const last = document.getElementById("lastname").value;
-document.getElementById("firstname").addEventListener('click', e => {
-   lastNameFilled();
-});
+// document.getElementById("lastname").addEventListener('click', e => {
+//    lastNameFilled();
+// });
 function lastNameFilled()
 {
-  if(first !== '')
+  if(last !== '')
     {
       return true;
     }
@@ -28,10 +28,19 @@ function lastNameFilled()
     alert("please enter your last name!")
   }
 }
+const emailValue = document.getElementById("email").value;
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+
 
 document.getElementById("submit").addEventListener('click', e => {
     firstNameFilled();
     lastNameFilled();
+    validateEmail();
     scrollWheel();
 });
 
