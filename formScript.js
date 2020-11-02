@@ -44,7 +44,21 @@ document.getElementById("submit").addEventListener('click', e => {
       scrollWheel();
     }
     else {
-      alert("Something's missing, try again!")
+      if(!firstNameFilled(first))
+      {
+        alert("please enter your first name!")
+      }
+      else if(!lastNameFilled(last))
+      {
+        alert("please enter your last name!")
+      }
+      else if(!validateEmail(emailValue))
+      {
+        alert("please enter your email!")
+      }
+      else {
+        alert("please check the box!")
+      }
     }
 });
 
