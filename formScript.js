@@ -31,11 +31,12 @@ function lastNameFilled()
 
 document.getElementById("submit").addEventListener('click', e => {
     firstNameFilled();
-    lastNameFilled(); 
+    lastNameFilled();
     scrollWheel();
 });
 
 function scrollWheel()
 {
   document.getElementById("loader").className = 'opaque';
+  setTimeout(function(){ alert("Hello"); }, 3000);
 }
