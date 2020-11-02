@@ -35,5 +35,5 @@ document.getElementById("submit").addEventListener('click', e => {
 
 function scrollWheel()
 {
-  document.getElementsByClassName("loader").className = 'opaque';
+  document.getElementById("loader").className = 'opaque';
 }
