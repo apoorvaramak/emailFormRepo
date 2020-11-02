@@ -39,7 +39,7 @@ function isChecked(check)
   {
     return true;
   }
-  return false; 
+  return false;
 }
 
 document.getElementById("submit").addEventListener('click', e => {
