@@ -5,11 +5,11 @@ const first = document.getElementById("firstname").value;
 
 function firstNameFilled(firstName)
 {
-  if(firstName !== '')
+  if(firstName === '')
     {
-      return true;
+      return false;
     }
-    return false;
+    return true;
 }
 
 const last = document.getElementById("lastname").value;
@@ -18,11 +18,11 @@ const last = document.getElementById("lastname").value;
 // });
 function lastNameFilled(lastName)
 {
-  if(lastName !== '')
+  if(lastName === '')
     {
-      return true;
+      return false;
     }
-    return false;
+    return true;
 }
 const emailValue = document.getElementById("email").value;
 
