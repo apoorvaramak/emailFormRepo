@@ -19,7 +19,7 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
- 
+
 .opaque
 {
   border: 16px solid #f3f3f3;
@@ -30,4 +30,13 @@
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
   opacity:1;
+}
+
+#submit{
+  opacity: 1;
+}
+
+#afterSubmission
+{
+  opacity: 0;
 }
