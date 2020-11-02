@@ -9,9 +9,7 @@ function firstNameFilled(firstName)
     {
       return true;
     }
-  else {
-      return false;
-    }
+    return false;
 }
 
 const last = document.getElementById("lastname").value;
@@ -24,9 +22,7 @@ function lastNameFilled(lastName)
     {
       return true;
     }
-    else {
-      return false;
-    }
+    return false;
 }
 const emailValue = document.getElementById("email").value;
 
@@ -43,9 +39,7 @@ function isChecked(check)
   {
     return true;
   }
-  else {
-    return false;
-  }
+  return false; 
 }
 
 document.getElementById("submit").addEventListener('click', e => {
@@ -55,18 +49,18 @@ document.getElementById("submit").addEventListener('click', e => {
     else {
       if(!firstNameFilled(first))
       {
-        alert("please enter your first name!")
+        alert("please enter your first name!");
       }
       else if(!lastNameFilled(last))
       {
-        alert("please enter your last name!")
+        alert("please enter your last name!");
       }
       else if(!validateEmail(emailValue))
       {
-        alert("please enter your email!")
+        alert("please enter your email!");
       }
       else {
-        alert("please check the box!")
+        alert("please check the box!");
       }
     }
 });
