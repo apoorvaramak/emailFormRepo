@@ -9,6 +9,9 @@ function firstNameFilled(firstName)
     {
       return true;
     }
+  else {
+      return false;
+    }
 }
 
 const last = document.getElementById("lastname").value;
@@ -20,6 +23,9 @@ function lastNameFilled(lastName)
   if(lastName !== '')
     {
       return true;
+    }
+    else {
+      return false;
     }
 }
 const emailValue = document.getElementById("email").value;
@@ -36,6 +42,9 @@ function isChecked(check)
   if(check === true)
   {
     return true;
+  }
+  else {
+    return false;
   }
 }
 
