@@ -3,30 +3,24 @@ const first = document.getElementById("firstname").value;
 //   firstNameFilled();
 // });
 
-function firstNameFilled()
+function firstNameFilled(firstName)
 {
-  if(first !== '')
+  if(firstName !== '')
     {
       return true;
     }
-  else{
-    alert("please enter your first name!")
-  }
 }
 
 const last = document.getElementById("lastname").value;
 // document.getElementById("lastname").addEventListener('click', e => {
 //    lastNameFilled();
 // });
-function lastNameFilled()
+function lastNameFilled(lastName)
 {
-  if(last !== '')
+  if(lastName !== '')
     {
       return true;
     }
-  else{
-    alert("please enter your last name!")
-  }
 }
 const emailValue = document.getElementById("email").value;
 
@@ -35,10 +29,18 @@ function validateEmail(email) {
     return re.test(email);
   }
 
+const checked = document.getElementById("check").value;
 
+function isChecked(check)
+{
+  if(check === true)
+  {
+    return true;
+  }
+}
 
 document.getElementById("submit").addEventListener('click', e => {
-    if(firstNameFilled() && lastNameFilled() && validateEmail()){
+    if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(emailValue) && isChecked(checked)){
       scrollWheel();
     }
 });
