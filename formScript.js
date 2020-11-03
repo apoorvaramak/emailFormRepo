@@ -43,15 +43,15 @@ function validateEmail(email) {
 
 const checked = document.getElementById("check").value;
 
-function isChecked(check)
+function isChecked(checker)
 {
-  if(check === true)
+  if(checker === true)
   {
     return true;
   }
   else {
     alert("please enter your first name!")
-    notFilled(firstname);
+    notFilled(check);
   }
 }
 
@@ -70,6 +70,7 @@ document.getElementById("submit").addEventListener('click', e => {
       }
       else if(!validateEmail(email))
       {
+        notFilled(email);
         alert("please enter your email!");
       }
       else {
