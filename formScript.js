@@ -2,14 +2,19 @@ const first = document.getElementById("firstname").value;
 // document.getElementById("firstname").addEventListener('click', e => {
 //   firstNameFilled();
 // });
-
-function firstNameFilled(firstName)
+first.addEventListener('click', e => {
+  firstNameFilled();
+})
+function firstNameFilled()
 {
-  if(firstName === '')
+  if(first === '')
     {
-      return false;
+      return true;
     }
-    return true;
+  else {
+      alert("please enter your first name!")
+      notFilled(firstname);
+    }
 }
 
 const last = document.getElementById("lastname").value;
@@ -72,4 +77,9 @@ function scrollWheel()
   setTimeout(function(){
     document.getElementById("loader").className = 'loader';
     alert("Thank you for signing up");}, 3000);
+}
+
+function notFilled(idValue)
+{
+  document.getElementById(idValue).className = 'redBorder'; 
 }
