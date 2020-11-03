@@ -2,9 +2,9 @@ const first = document.getElementById("firstnameInput").value;
 // document.getElementById("firstname").addEventListener('click', e => {
 //   firstNameFilled();
 // });
-first.addEventListener('click', e => {
-  firstNameFilled();
-})
+// first.addEventListener('click', e => {
+//   firstNameFilled();
+// })
 function firstNameFilled(firstName)
 {
   if(firstName !== '')
@@ -20,9 +20,9 @@ function firstNameFilled(firstName)
 
 const last = document.getElementById("lastnameInput").value;
 
-last.addEventListener('click', e => {
-  lastNameFilled();
-})
+// last.addEventListener('click', e => {
+//   lastNameFilled();
+// })
 function lastNameFilled(lastName)
 {
   if(lastName !== '')
