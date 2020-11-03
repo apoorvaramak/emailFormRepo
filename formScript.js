@@ -90,5 +90,5 @@ function scrollWheel()
 
 function notFilled()
 {
-  document.getElementById(firstNameInput).className = 'redBorder';
+  document.getElementById(firstnameInput).className = 'redBorder';
 }
