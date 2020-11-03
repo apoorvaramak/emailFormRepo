@@ -1,4 +1,4 @@
-const first = document.getElementById("firstname").value;
+const first = document.getElementById("firstnameInput").value;
 // document.getElementById("firstname").addEventListener('click', e => {
 //   firstNameFilled();
 // });
@@ -18,7 +18,7 @@ function firstNameFilled(firstName)
     }
 }
 
-const last = document.getElementById("lastname").value;
+const last = document.getElementById("lastnameInput").value;
 
 last.addEventListener('click', e => {
   lastNameFilled();
@@ -34,14 +34,14 @@ function lastNameFilled(lastName)
         notFilled(lastname);
     }
 }
-const emailValue = document.getElementById("email").value;
+const emailValue = document.getElementById("emailInput").value;
 
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   }
 
-const checked = document.getElementById("check").value;
+const checked = document.getElementById("check").checked;
 
 function isChecked(checker)
 {
