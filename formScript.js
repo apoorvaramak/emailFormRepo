@@ -57,27 +57,7 @@ function isChecked(checker)
 }
 
 document.getElementById("submit").addEventListener('click', e => {
-    if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
-      scrollWheel();
-    }
-    else {
-      if(!firstNameFilled(first))
-      {
-        alert("please enter your first name!");
-      }
-      else if(!lastNameFilled(last))
-      {
-        alert("please enter your last name!");
-      }
-      else if(!validateEmail(email))
-      {
-        notFilled(email);
-        alert("please enter your email!");
-      }
-      else {
-        alert("please check the box!");
-      }
-    }
+    fullyFilled();
 });
 
 function scrollWheel()
@@ -87,6 +67,34 @@ function scrollWheel()
   setTimeout(function(){
     document.getElementById("loader").className = 'loader';
     alert("Thank you for signing up");}, 3000);
+}
+
+function fullyFilled(){
+  if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
+    scrollWheel();
+  }
+  else {
+    if(!firstNameFilled(first))
+    {
+      alert("please enter your first name!");
+      fullyFilled();
+    }
+    else if(!lastNameFilled(last))
+    {
+      alert("please enter your last name!");
+      fullyFilled();
+    }
+    else if(!validateEmail(email))
+    {
+      notFilled(email);
+      alert("please enter your email!");
+      fullyFilled();
+    }
+    else {
+      alert("please check the box!");
+      fullyFilled(); 
+    }
+  }
 }
 
 function notFilled()
