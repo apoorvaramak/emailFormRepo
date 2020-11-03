@@ -11,7 +11,7 @@ function firstNameFilled(firstName)
       return true;
   }
   else {
-      alert("pwease enter your first name!")
+      //alert("pwease enter your first name!")
       notFilled();
       return false;
     }
@@ -29,8 +29,8 @@ function lastNameFilled(lastName)
       return true;
     }
   else {
-        alert("pwease enter your last name!")
-        notFilled(lastname);
+        //alert("pwease enter your last name!")
+        notFilled();
         return false;
     }
 }
@@ -50,7 +50,7 @@ function isChecked(checker)
     return true;
   }
   else {
-    alert("check the box pwease!")
+    //alert("check the box pwease!")
     notFilled();
     return false;
   }
@@ -91,5 +91,5 @@ function scrollWheel()
 
 function notFilled()
 {
-  document.getElementById(firstnameInput).className = 'redBorder';
+  //document.getElementById(firstnameInput).className = 'redBorder';
 }
