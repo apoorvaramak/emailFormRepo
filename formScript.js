@@ -13,7 +13,7 @@ function firstNameFilled(firstName)
     }
   else {
 
-      alert("please enter your first name!")
+      alert("pwease enter your first name!")
       notFilled(firstname);
     }
 }
@@ -30,7 +30,7 @@ function lastNameFilled(lastName)
       return true;
     }
   else {
-        alert("please enter your last name!")
+        alert("pwease enter your last name!")
         notFilled(lastname);
     }
 }
@@ -50,8 +50,8 @@ function isChecked(checker)
     return true;
   }
   else {
-    alert("please enter your first name!")
-    notFilled(check);
+    alert("check the box pwease!")
+    notFilled();
   }
 }
 
@@ -88,7 +88,7 @@ function scrollWheel()
     alert("Thank you for signing up");}, 3000);
 }
 
-function notFilled(idValue)
+function notFilled()
 {
-  document.getElementById(idValue).className = 'redBorder';
+  document.getElementById(firstNameInput).className = 'redBorder';
 }
