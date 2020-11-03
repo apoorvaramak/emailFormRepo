@@ -77,22 +77,18 @@ function fullyFilled(){
     if(!firstNameFilled(first))
     {
       alert("please enter your first name!");
-      fullyFilled();
     }
     else if(!lastNameFilled(last))
     {
       alert("please enter your last name!");
-      fullyFilled();
     }
     else if(!validateEmail(email))
     {
       notFilled(email);
       alert("please enter your email!");
-      fullyFilled();
     }
     else {
-      alert("please check the box!");
-      fullyFilled(); 
+      alert("please check the box!"); 
     }
   }
 }
