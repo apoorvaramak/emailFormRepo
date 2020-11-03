@@ -5,29 +5,34 @@ const first = document.getElementById("firstname").value;
 first.addEventListener('click', e => {
   firstNameFilled();
 })
-function firstNameFilled()
+function firstNameFilled(firstName)
 {
-  if(first === '')
+  if(firstName !== '')
     {
       return true;
     }
   else {
+
       alert("please enter your first name!")
       notFilled(firstname);
     }
 }
 
 const last = document.getElementById("lastname").value;
-// document.getElementById("lastname").addEventListener('click', e => {
-//    lastNameFilled();
-// });
+
+last.addEventListener('click', e => {
+  lastNameFilled();
+})
 function lastNameFilled(lastName)
 {
-  if(lastName === '')
+  if(lastName !== '')
     {
-      return false;
+      return true;
     }
-    return true;
+  else {
+        alert("please enter your last name!")
+        notFilled(lastname);
+    }
 }
 const emailValue = document.getElementById("email").value;
 
@@ -44,11 +49,14 @@ function isChecked(check)
   {
     return true;
   }
-  return false;
+  else {
+    alert("please enter your first name!")
+    notFilled(firstname);
+  }
 }
 
 document.getElementById("submit").addEventListener('click', e => {
-    if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(emailValue) && isChecked(checked)){
+    if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
       scrollWheel();
     }
     else {
@@ -60,7 +68,7 @@ document.getElementById("submit").addEventListener('click', e => {
       {
         alert("please enter your last name!");
       }
-      else if(!validateEmail(emailValue))
+      else if(!validateEmail(email))
       {
         alert("please enter your email!");
       }
@@ -81,5 +89,5 @@ function scrollWheel()
 
 function notFilled(idValue)
 {
-  document.getElementById(idValue).className = 'redBorder'; 
+  document.getElementById(idValue).className = 'redBorder';
 }
