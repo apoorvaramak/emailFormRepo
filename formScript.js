@@ -7,14 +7,13 @@ const first = document.getElementById("firstnameInput").value;
 // })
 function firstNameFilled(firstName)
 {
-  if(firstName !== '')
-    {
+  if(firstName !== ''){
       return true;
-    }
+  }
   else {
-
       alert("pwease enter your first name!")
-      notFilled(firstname);
+      notFilled();
+      return false;
     }
 }
 
@@ -32,6 +31,7 @@ function lastNameFilled(lastName)
   else {
         alert("pwease enter your last name!")
         notFilled(lastname);
+        return false;
     }
 }
 const emailValue = document.getElementById("emailInput").value;
@@ -52,6 +52,7 @@ function isChecked(checker)
   else {
     alert("check the box pwease!")
     notFilled();
+    return false;
   }
 }
 
