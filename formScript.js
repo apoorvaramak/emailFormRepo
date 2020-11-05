@@ -30,7 +30,6 @@ function lastNameFilled(lastName)
     }
   else {
         //alert("pwease enter your last name!")
-        document.getElementById("firstname").className = 'redBorder';
         return false;
     }
 }
@@ -89,10 +88,12 @@ function fullyFilled(){
   else {
     if(!firstNameFilled(first))
     {
+      document.getElementById("firstname").className = 'redBorder';
       alert("please enter your first name!");
     }
     else if(!lastNameFilled(last))
     {
+      document.getElementById("lastname").className = 'redBorder';
       alert("please enter your last name!");
     }
     else if(!validateEmail(email))
@@ -101,6 +102,7 @@ function fullyFilled(){
       alert("please enter your email!");
     }
     else {
+      document.getElementById("check").className = 'redBorder';
       alert("please check the box!");
     }
   }
