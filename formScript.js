@@ -30,7 +30,7 @@ function lastNameFilled(lastName)
     }
   else {
         //alert("pwease enter your last name!")
-        notFilled();
+        document.getElementById("firstname").className = 'redBorder';
         return false;
     }
 }
@@ -44,6 +44,7 @@ function validateEmail(email) {
     }
     else {
       {
+        document.getElementById("lastname").className = 'redBorder';
         return false;
       }
     }
@@ -58,7 +59,7 @@ function isChecked(checker)
   }
   else {
     //alert("check the box pwease!")
-    notFilled();
+    document.getElementById("check").className = 'redBorder';
     return false;
   }
 }
@@ -80,7 +81,6 @@ function fullyFilled(){
   const first = document.querySelector("#firstnameInput").value;
   const last = document.querySelector("#lastnameInput").value;
   const emailValue = document.querySelector("#emailInput").value;
-  debugger;
   const checked = document.querySelector("#checkInput");
 
   if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
@@ -97,16 +97,11 @@ function fullyFilled(){
     }
     else if(!validateEmail(email))
     {
-      notFilled(email);
+      document.getElementById("email").className = 'redBorder';
       alert("please enter your email!");
     }
     else {
       alert("please check the box!");
     }
   }
-}
-
-function notFilled(elementId)
-{
-  //document.getElementById(elementId).className = 'redBorder';
 }
