@@ -80,6 +80,7 @@ function fullyFilled(){
   const first = document.querySelector("#firstnameInput").value;
   const last = document.querySelector("#lastnameInput").value;
   const emailValue = document.querySelector("#emailInput").value;
+  debugger; 
   const checked = document.getElementById("check").checked;
 
   if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
