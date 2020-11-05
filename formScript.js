@@ -52,7 +52,7 @@ function validateEmail(email) {
 
 function isChecked(checker)
 {
-  if(checker === true)
+  if(checker.checked === true)
   {
     return true;
   }
@@ -81,7 +81,7 @@ function fullyFilled(){
   const last = document.querySelector("#lastnameInput").value;
   const emailValue = document.querySelector("#emailInput").value;
   debugger;
-  const checked = document.getElementById("checkInput").checked;
+  const checked = document.querySelector("#checkInput");
 
   if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
     scrollWheel();
