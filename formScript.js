@@ -44,7 +44,7 @@ function validateEmail(email) {
     }
     else {
       {
-        return false; 
+        return false;
       }
     }
   }
@@ -80,7 +80,7 @@ function fullyFilled(){
   const first = document.querySelector("#firstnameInput").value;
   const last = document.querySelector("#lastnameInput").value;
   const emailValue = document.querySelector("#emailInput").value;
-  const checked = document.querySelector("#check").checked;
+  const checked = document.getElementById("check").checked;
 
   if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
     scrollWheel();
@@ -105,7 +105,7 @@ function fullyFilled(){
   }
 }
 
-function notFilled()
+function notFilled(elementId)
 {
-  //document.getElementById(firstnameInput).className = 'redBorder';
+  document.getElementById(elementId).className = 'redBorder';
 }
