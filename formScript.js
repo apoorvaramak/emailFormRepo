@@ -88,21 +88,21 @@ function fullyFilled(){
   else {
     if(!firstNameFilled(first))
     {
-      document.getElementById("firstname").className = 'redBorder';
+      firstname.style.border = "red"; 
       alert("please enter your first name!");
     }
     else if(!lastNameFilled(last))
     {
-      document.getElementById("lastname").className = 'redBorder';
+      lastname.style.border = "red";
       alert("please enter your last name!");
     }
     else if(!validateEmail(email))
     {
-      document.getElementById("email").className = 'redBorder';
+      email.style.border = "red";
       alert("please enter your email!");
     }
     else {
-      document.getElementById("check").className = 'redBorder';
+      check.style.border = "red";
       alert("please check the box!");
     }
   }
