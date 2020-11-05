@@ -80,8 +80,8 @@ function fullyFilled(){
   const first = document.querySelector("#firstnameInput").value;
   const last = document.querySelector("#lastnameInput").value;
   const emailValue = document.querySelector("#emailInput").value;
-  debugger; 
-  const checked = document.getElementById("check").checked;
+  debugger;
+  const checked = document.getElementById("checkInput").checked;
 
   if(firstNameFilled(first) && lastNameFilled(last) && validateEmail(email) && isChecked(checked)){
     scrollWheel();
