@@ -107,5 +107,5 @@ function fullyFilled(){
 
 function notFilled(elementId)
 {
-  document.getElementById(elementId).className = 'redBorder';
+  //document.getElementById(elementId).className = 'redBorder';
 }
